@@ -1,6 +1,6 @@
 "use strict";
 const fs = require("fs");
-const wordlist = './wordlist.txt';
+const wordlist = './wordle_words.txt';
 const wordArray = readInputArray(wordlist);
 
 let freq = [];
