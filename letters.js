@@ -19,16 +19,18 @@ wordArray.forEach(function(word) {
         })
     }
 });
-console.log("Letters by frequency in 5-letter words:");
+console.log("Letters by frequency in 5-letter words (not counting multiple occurences within same word):");
 Object.keys(freq).sort((a,b) => freq[b] - freq[a]).forEach(function(letter) {
     console.log(letter,freq[letter]);
 })
 
-function readInputTxt(path) {
-    return fs.readFileSync(path, 'utf8');
-}
+
+
+
+
+
 function readInputArray(path) {
-    return readInputTxt(path).split(/\r?\n/);
+    return fs.readFileSync(path, 'utf8').split(/\r?\n/);
 }
 
 
